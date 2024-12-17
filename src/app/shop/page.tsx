@@ -274,6 +274,7 @@ function Shop() {
                 key={product.id}
                 className="relative bg-white rounded-lg shadow-md overflow-hidden group"
               >
+                <Link href={`/shop/${product.name}`}>
                 <div className="relative">
                   <Image
                     src={product.image}
@@ -294,15 +295,16 @@ function Shop() {
                   )}
                   {/* Hover overlay */}
                   <div className="absolute inset-0 bg-black bg-opacity-60 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                    <Link href={product.name}> 
+                    {/* <Link href={product.name}>  cancel this*/}
                     <button className="bg-white text-black px-4 py-2 mb-2 rounded">
 
 
-                      Add to Cart
+                      {/* Add to Cart cancel this */}
+                      Buy Now
                       
 
                     </button>
-                    </Link>
+                    {/* </Link> cancel this*/}
                     <div className="flex space-x-4 text-white">
                       <button className="hover:text-yellow-500 flex items-center">
                         <Image
@@ -338,12 +340,13 @@ function Shop() {
                     </div>
                   </div>
                 </div>
+                </Link>
                 <div className="p-4">
                   <h2 className="text-lg font-semibold">{product.name}</h2>
                   <p className="text-gray-600">{product.description}</p>
                   <div className="mt-2">
                     <span className="text-lg font-bold text-gray-800">
-                      {product.price}
+                     {product.price} 
                     </span>
                     {product.originalPrice && (
                       <span className="text-sm line-through text-gray-500 ml-2">

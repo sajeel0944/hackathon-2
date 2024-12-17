@@ -9,9 +9,9 @@ const Header = () => {
   console.log(display);
 
   return (
-    <header className="h-[100px] flex justify-between items-center px-16 py-4 shadow-md [@media(max-width:640px)]:px-2 bg-[#FFFFFF]">
+    <header className={`${display? "[@media(max-width:768px)]:h-[220px] ":"h-[100px] items-center"} flex justify-between  px-16 py-4 shadow-md [@media(max-width:640px)]:px-2 bg-[#FFFFFF]`}>
       {/* Logo */}
-      <div className="flex items-center space-x-2">
+      <div className={`flex  space-x-2 ${display ? "":"items-center"}`}>
         <div className="text-yellow-500 text-2xl ">
           <Image
             src={"/picture/Meubel House_Logos-05.png"}
@@ -27,7 +27,7 @@ const Header = () => {
       <nav
         className={`flex space-x-6  "[@media(max-width:768px)]:border-2 ${
           display ? "block" : "[@media(max-width:768px)]:hidden"
-        } [@media(max-width:768px)]:fixed [@media(max-width:768px)]:top-[100px] [@media(max-width:768px)]:left-0 [@media(max-width:768px)]:h-96 [@media(max-width:768px)]:flex-col [@media(max-width:768px)]:space-x-0 [@media(max-width:768px)]:w-[35%] [@media(max-width:768px)]:items-center [@media(max-width:768px)]:space-y-9 [@media(max-width:768px)]:text-2xl [@media(max-width:768px)]:pt-9 [@media(max-width:768px)]:font-extrabold [@media(max-width:768px)]:rounded-lg `}
+        } [@media(max-width:768px)]:absolute [@media(max-width:768px)]:top-[60px] [@media(max-width:768px)]:left-[35%] [@media(max-width:768px)]:h-40 [@media(max-width:768px)]:flex-col [@media(max-width:768px)]:space-x-0 [@media(max-width:768px)]:w-[35%] [@media(max-width:768px)]:items-center [@media(max-width:768px)]:space-y-3 [@media(max-width:768px)]:text-xl [@media(max-width:768px)]:pt-2 [@media(max-width:768px)]:font-extrabold [@media(max-width:768px)]:rounded-lg `}
       >
         <Link href="/home" className="text-gray-700 hover:text-black ">
           Home
@@ -44,14 +44,14 @@ const Header = () => {
       </nav>
 
       {/* Icons */}
-      <div className="flex items-center space-x-7 [@media(max-width:480px)]:space-x-5  [@media(max-width:380px)]:ml-5 ">
+      <div className={`flex ${display ? "":"items-center"} space-x-7 [@media(max-width:480px)]:space-x-5 [@media(max-width:400px)]:w-[40%] [@media(max-width:380px)]:ml-5 `}>
         <Link href={"contant"}>
           <Image
             src={"/picture/mdi_account-alert-outline.png"}
             alt={"logo"}
             width={28}
             height={28}
-            className="cursor-pointer [@media(max-width:440px)]:w-[13%] [@media(max-width:440px)]:h-6 "
+            className="cursor-pointer [@media(max-width:440px)]:w-[100%] [@media(max-width:440px)]:h-6 "
           />
         </Link>
 
@@ -61,7 +61,7 @@ const Header = () => {
             alt={"logo"}
             width={28}
             height={28}
-            className="cursor-pointer [@media(max-width:440px)]:w-[13%] [@media(max-width:440px)]:h-6"
+            className="cursor-pointer [@media(max-width:440px)]:w-[100%] [@media(max-width:440px)]:h-6"
           />
         </Link>
         <Link href={"/404/heart"}>
@@ -70,7 +70,7 @@ const Header = () => {
             alt={"logo"}
             width={28}
             height={28}
-            className="cursor-pointer [@media(max-width:440px)]:w-[13%] [@media(max-width:440px)]:h-6"
+            className="cursor-pointer [@media(max-width:440px)]:w-[100%] [@media(max-width:440px)]:h-6"
           />
         </Link>
         <Link href={"shop"}>
@@ -79,7 +79,7 @@ const Header = () => {
             alt={"logo"}
             width={28}
             height={28}
-            className="cursor-pointer [@media(max-width:440px)]:w-[13%] [@media(max-width:440px)]:h-6"
+            className="cursor-pointer [@media(max-width:440px)]:w-[100%] [@media(max-width:440px)]:h-6"
           />
         </Link>
       </div>

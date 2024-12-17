@@ -20,8 +20,8 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-[#FFFFFF] px-6 py-8 md:px-16 xl:px-24">
-      <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4 xl:gap-12">
+    <footer className="bg-[#FFFFFF] px-6 py-8 md:px-16 xl:px-24 border-2">
+      <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4 xl:gap-12 ">
         {/* Company Info */}
         <div>
           <h2 className="text-2xl font-bold mb-4">Furniro.</h2>
@@ -35,7 +35,7 @@ const Footer = () => {
         {/* Links */}
         <div>
           <h3 className="text-lg font-semibold text-gray-500 mb-4">Links</h3>
-          <ul className="space-y-2">
+          <ul className="md:space-y-2 lg:space-y-5">
             <li>
               <Link href="home" className="text-gray-700 hover:text-black">
                 Home
@@ -62,7 +62,7 @@ const Footer = () => {
         {/* Help */}
         <div>
           <h3 className="text-lg font-semibold text-gray-500 mb-4">Help</h3>
-          <ul className="space-y-2">
+          <ul className="md:space-y-2 lg:space-y-5">
             <li>
               <Link href="404/Payment Options" className="text-gray-700 hover:text-black">
                 Payment Options
@@ -82,22 +82,22 @@ const Footer = () => {
         </div>
 
         {/* Newsletter */}
-        <div>
+        <div className=" lg:-ml-20">
           <h3 className="text-lg font-semibold text-gray-500 mb-4">
             Newsletter
           </h3>
           <form
             onSubmit={handleSubmit}
-            className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2 "
+            className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2  "
           >
             <input
               type="email"
               placeholder="Enter Your Email Address"
-              className="flex-1 border border-gray-300 p-2 rounded focus:outline-none focus:ring-2 focus:ring-gray-500 "
+              className="flex-1 border border-gray-300 p-2 rounded focus:outline-none focus:ring-2 focus:ring-gray-500 lg:w-[100%] "
             />
             <button
               type="submit"
-              className="bg-black  text-white px-4 py-2 rounded hover:bg-gray-800 lg:w-[40%] lg:px-2"
+              className="bg-black  text-white px-4 py-2 rounded hover:bg-gray-800 lg:w-[27%] lg:text-xs lg:font-bold lg:px-1 "
               onClick={() => {
                 setsub(!sub);
               }}

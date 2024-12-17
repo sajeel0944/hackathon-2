@@ -12,8 +12,8 @@ export default function Home() {
       id: 1,
       name: "Syltherine",
       description: "Stylish cafe chair",
-      price: "Rp 2.500.000",
-      originalPrice: "Rp 3.500.000",
+      price: "Rs 2.500.000",
+      originalPrice: "Rs 3.500.000",
       discount: "30%",
       image: "/picture/Images.png",
     },
@@ -21,15 +21,15 @@ export default function Home() {
       id: 2,
       name: "Leviosa",
       description: "Stylish cafe chair",
-      price: "Rp 2.500.000",
+      price: "Rs 2.500.000",
       image: "/picture/image 2.png",
     },
     {
       id: 3,
       name: "Lolito",
       description: "Luxury big sofa",
-      price: "Rp 7.000.000",
-      originalPrice: "Rp 14.000.000",
+      price: "Rs 7.000.000",
+      originalPrice: "Rs 14.000.000",
       discount: "50%",
       image: "/picture/image 3.png",
     },
@@ -37,7 +37,7 @@ export default function Home() {
       id: 4,
       name: "Respira",
       description: "Outdoor bar table and stool",
-      price: "Rp 500.000",
+      price: "Rs 500.000",
       new: true,
       image: "/picture/image 4.png",
     },
@@ -45,14 +45,14 @@ export default function Home() {
       id: 5,
       name: "Grifo",
       description: "Night lamp",
-      price: "Rp 1.500.000",
+      price: "Rs 1.500.000",
       image: "/picture/Image 5.png",
     },
     {
       id: 6,
       name: "Muggo",
       description: "Small mug",
-      price: "Rp 150.000",
+      price: "Rs 150.000",
       new: true,
       image: "/picture/image 6.png",
     },
@@ -60,8 +60,8 @@ export default function Home() {
       id: 7,
       name: "Pingky",
       description: "Cute bed set",
-      price: "Rp 7.000.000",
-      originalPrice: "Rp 14.000.000",
+      price: "Rs 7.000.000",
+      originalPrice: "Rs 14.000.000",
       discount: "50%",
       image: "/picture/image 7.png",
     },
@@ -69,7 +69,7 @@ export default function Home() {
       id: 8,
       name: "Potty",
       description: "Minimalist flower pot",
-      price: "Rp 500.000",
+      price: "Rs 500.000",
       new: true,
       image: "/picture/image 8.png",
     },
@@ -221,65 +221,68 @@ export default function Home() {
                 key={product.id}
                 className="relative bg-white rounded-lg shadow-md overflow-hidden group"
               >
-                <div className="relative">
-                  <Image
-                    src={product.image}
-                    alt={product.name}
-                    width={170}
-                    height={150}
-                    className="w-full h-48 object-cover"
-                  />
-                  {product.discount && (
-                    <span className="absolute top-2 right-2 bg-red-500 text-white text-xs px-2 py-1 rounded">
-                      -{product.discount}
-                    </span>
-                  )}
-                  {product.new && (
-                    <span className="absolute top-2 right-2 bg-green-500 text-white text-xs px-2 py-1 rounded">
-                      New
-                    </span>
-                  )}
-                  {/* Hover overlay */}
-                  <div className="absolute inset-0 bg-black bg-opacity-60 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                    <Link href={product.name}>
+                <Link href={`/shop/${product.name}`}>
+                  <div className="relative">
+                    <Image
+                      src={product.image}
+                      alt={product.name}
+                      width={170}
+                      height={150}
+                      className="w-full h-48 object-cover"
+                    />
+                    {product.discount && (
+                      <span className="absolute top-2 right-2 bg-red-500 text-white text-xs px-2 py-1 rounded">
+                        -{product.discount}
+                      </span>
+                    )}
+                    {product.new && (
+                      <span className="absolute top-2 right-2 bg-green-500 text-white text-xs px-2 py-1 rounded">
+                        New
+                      </span>
+                    )}
+                    {/* Hover overlay */}
+                    <div className="absolute inset-0 bg-black bg-opacity-60 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                      {/* <Link href={product.name}> cancel this*/}
                       <button className="bg-white text-black px-4 py-2 mb-2 rounded">
-                        Add to Cart
+                        {/* Add to Cart  cancel this*/}
+                        Buy Now
                       </button>
-                    </Link>
-                    <div className="flex space-x-4 text-white">
-                      <button className="hover:text-yellow-500 flex items-center">
-                        <Image
-                          src={"/picture/gridicons_share.png"}
-                          alt={"share"}
-                          width={12}
-                          height={12}
-                          className="mr-1 "
-                        />
-                        Share
-                      </button>
-                      <button className="hover:text-yellow-500  flex items-center">
-                        <Image
-                          src={"/picture/compare-svgrepo-com 1.png"}
-                          alt={"share"}
-                          width={12}
-                          height={12}
-                          className="mr-1 "
-                        />
-                        Compare
-                      </button>
-                      <button className="hover:text-yellow-500  flex items-center">
-                        <Image
-                          src={"/picture/Heart.png"}
-                          alt={"share"}
-                          width={12}
-                          height={12}
-                          className="mr-1 "
-                        />
-                        Like
-                      </button>
+                      {/* </Link> cancel this*/}
+                      <div className="flex space-x-4 text-white">
+                        <button className="hover:text-yellow-500 flex items-center">
+                          <Image
+                            src={"/picture/gridicons_share.png"}
+                            alt={"share"}
+                            width={12}
+                            height={12}
+                            className="mr-1 "
+                          />
+                          Share
+                        </button>
+                        <button className="hover:text-yellow-500  flex items-center">
+                          <Image
+                            src={"/picture/compare-svgrepo-com 1.png"}
+                            alt={"share"}
+                            width={12}
+                            height={12}
+                            className="mr-1 "
+                          />
+                          Compare
+                        </button>
+                        <button className="hover:text-yellow-500  flex items-center">
+                          <Image
+                            src={"/picture/Heart.png"}
+                            alt={"share"}
+                            width={12}
+                            height={12}
+                            className="mr-1 "
+                          />
+                          Like
+                        </button>
+                      </div>
                     </div>
                   </div>
-                </div>
+                </Link>
                 <div className="p-4">
                   <h2 className="text-lg font-semibold">{product.name}</h2>
                   <p className="text-gray-600">{product.description}</p>
