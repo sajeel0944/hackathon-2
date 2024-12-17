@@ -55,7 +55,7 @@ const Header = () => {
           />
         </Link>
 
-        <Link href={"/404/search"}>
+        <Link href={"/404/search/1"}>
           <Image
             src={"/picture/akar-icons_search.png"}
             alt={"logo"}
@@ -64,7 +64,7 @@ const Header = () => {
             className="cursor-pointer [@media(max-width:440px)]:w-[100%] [@media(max-width:440px)]:h-6"
           />
         </Link>
-        <Link href={"/404/heart"}>
+        <Link href={"/404/heart/2"}>
           <Image
             src={"/picture/akar-icons_heart.png"}
             alt={"logo"}

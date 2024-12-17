@@ -419,7 +419,7 @@ function Product({ params }: { params: { product: string } }) {
 
       <div className="w-full lg:[604px] px-24  [@media(max-width:1124px)]:px-8 [@media(max-width:639px)]:px-1 md:h-[720px] sm:h-[1130px] [@media(max-width:639px)]:h-[1220px]">
         <div className=" w-full h-[595px] space-y-12 mt-7 md:h-[660px] sm:h-[1058px] [@media(max-width:460px)]: [@media(max-width:639px)]:h-[1160px] [@media(max-width:639px)]:space-y-9">
-          <div className="w-full h-9 flex items-center justify-center ">
+          <div className="w-full h-9 flex items-center justify-center px-1">
             <div className="w-[60%] h-9 flex justify-between  [@media(max-width:1124px)]:w-full [@media(max-width:639px)]:items-center">
               <h2 className="font-medium md:text-2xl sm:text-xl [@media(max-width:460px)]:text-sm">
                 Description
@@ -433,7 +433,7 @@ function Product({ params }: { params: { product: string } }) {
             </div>
           </div>
 
-          <div className="w-full h-[174px] space-y-7  md:h-[240px] sm:h-[330px] [@media(max-width:639px)]:h-[450px] ">
+          <div className="w-full h-[174px] space-y-7  md:h-[240px] sm:h-[330px] [@media(max-width:639px)]:h-[450px] px-1">
             <p className="text-justify text-[#9F9F9F]">
               Embodying the raw, wayward spirit of rock n roll, the Kilburn
               portable active stereo speaker takes the unmistakable look and

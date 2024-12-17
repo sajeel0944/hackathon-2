@@ -121,8 +121,8 @@ function Checkout({ params }: { params: { checkout: string } }) {
         </div>
       </div>
 
-      <div className=" w-full h-[1690px] flex items-center xl:px-24 lg:px-14 md:px-4  [@media(max-width:767px)]:h-[2600px]">
-        <div className=" w-full h-[1590px] flex justify-between [@media(max-width:767px)]:flex-col [@media(max-width:767px)]:h-[2500px]">
+      <div className=" w-full h-[1690px] flex items-center xl:px-24 lg:px-14 md:px-4  [@media(max-width:767px)]:h-[2540px]">
+        <div className=" w-full h-[1590px] flex justify-between [@media(max-width:767px)]:flex-col [@media(max-width:767px)]:h-[2440px]">
           <div className=" w-[49%] h-[1590px] px-12 pt-5 space-y-10 [@media(max-width:767px)]:w-full [@media(max-width:500px)]:px-4">
             <h2 className="font-semibold text-4xl">Billing details</h2>
             <div className=" w-full h-28 flex justify-between">
@@ -288,7 +288,7 @@ function Checkout({ params }: { params: { checkout: string } }) {
               </p>
               <div className="flex justify-center">
                 <div
-                  className={`border border-black w-[60%] h-16 rounded-2xl flex justify-center items-center cursor-pointer ${
+                  className={`border border-black w-[60%] h-16 rounded-2xl flex justify-center items-center cursor-pointer mt-9 ${
                     order ? "hidden" : "block"
                   }`}
                   onClick={() => {
@@ -306,7 +306,7 @@ function Checkout({ params }: { params: { checkout: string } }) {
       {/* jab place order par click ho ga to ye display block ho jaye ga */}
 
       <div
-        className={`border-2 border-white shadow-lg  h-60 rounded-lg bg-white fixed top-[30%] md:left-[32%] lg:w-[30%] md:w-[40%] sm:w-[50%] sm:left-[20%] [@media(max-width:639px)]:w-[66%] [@media(max-width:639px)]:left-[15%] ${
+        className={`border-2 border-white shadow-lg  h-60 rounded-xl  bg-white fixed top-[30%] md:left-[32%] lg:w-[30%] md:w-[40%] sm:w-[50%] sm:left-[20%] [@media(max-width:639px)]:w-[66%] [@media(max-width:639px)]:left-[15%] ${
           order ? "block" : "hidden"
         }`}
       >
@@ -330,9 +330,9 @@ function Checkout({ params }: { params: { checkout: string } }) {
             </h5>
           </div>
         </div>
-        <div className="flex items-center justify-center border-2 h-14">
+        <div className="flex items-center justify-center h-14">
           <button
-            className="border border-black w-24 font-bold rounded-md hover:font-extrabold"
+            className="border border-black w-24 font-bold rounded-md hover:font-extrabold bg-white"
             onClick={() => {
               setorder(!order);
               playSound();
